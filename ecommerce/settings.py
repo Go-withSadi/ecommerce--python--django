@@ -82,12 +82,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'URL': os.getenv('postgresql://postgres:c2F53B5fc-D6CaEg6ca-2a*EF2D1Eca1@viaduct.proxy.rlwy.net:15115/railway'),
-        'NAME': os.getenv('railway'),
-        'USER': os.getenv('postgres'),
-        'PASSWORD': os.getenv('c2F53B5fc-D6CaEg6ca-2a*EF2D1Eca1'),
-        'HOST' : os.getenv('viaduct.proxy.rlwy.net'),
-        'PORT' : os.getenv('15115'),
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
